@@ -35,6 +35,8 @@ This project is a guide to building agents from scratch, culminating in an "ambi
 - Uses virtual environment in `.venv/`
 - Requires OpenAI and LangSmith API keys
 - Can be installed with `pip install -e .`
+- Run the LangGraph development server with `langgraph dev`
+- Access the LangGraph Studio UI at https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024
 
 ## LangGraph Integration
 This project heavily utilizes LangGraph for building agent workflows:
@@ -42,3 +44,12 @@ This project heavily utilizes LangGraph for building agent workflows:
 - Implements checkpoints for state management
 - Supports human-in-the-loop interactions
 - Provides memory capabilities for persistent learning
+
+## Available Graphs
+The following graphs are registered with the LangGraph development server:
+- langgraph101: Basic LangGraph example
+- email_assistant: Email triage and response system
+- email_assistant_hitl: Email assistant with human-in-the-loop capabilities
+- email_assistant_hitl_memory: Email assistant with HITL and memory
+- email_assistant_hitl_memory_gmail: Email assistant with Gmail integration
+- cron: Scheduled tasks for email processing
